@@ -30,27 +30,33 @@ if(isset($_SESSION['commande_ok'])){
 
 
 <div class="container-fluid">
+
     <div class="row">
+
         <?php foreach ($tableau as $categorie) :  ?>
 
             <!-- <div class="container-fluid"> -->
 
             <div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12" >
+            <div class="zoom">
                 <a href="plat_categorie.php?id_categorie=<?= $categorie->id ?>">
-
-                    <img src="/images_the_district/category/<?= $categorie->image ?>" class="rounded img-responsive ;" height="250px" width="250px">
+             
+                    <img src="/images_the_district/category/<?= $categorie->image ?>" class="rounded img-responsive;" height="250px" width="250px">
                 </a>
+            </div>
                 <br>
                 <br>
                 <div>
                     <p class="reseaux"><strong><?= $categorie->libelle  ?></strong><br>
                 </div>
             </div>
+
             <!-- </div> -->
 
             <!-- <br> -->
             <!-- </div> -->
         <?php endforeach; ?>
+
     </div>
 </div>
 
