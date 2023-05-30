@@ -45,7 +45,7 @@ if(isset($_POST['ville'])){
 
 
 $prix = $_POST['prix'];
-
+$libelle = $_POST['libelle'];
 //var_dump($_POST, $total, $date_commande, $adresse_complete);
 
 $db = connexionBase();
@@ -93,7 +93,7 @@ try {
     $mail->Port       = 1025;                                   
     
     // Expéditeur du mail - adresse mail + nom (facultatif)
-    $mail->setFrom('from@thedistrict.com', 'The District Company');
+    $mail->setFrom('contact@thedistrict.com', 'The District Company');
     
     // Destinataire(s) - adresse et nom (facultatif)
     $mail->addAddress($email, $nom_client);
@@ -113,10 +113,12 @@ try {
     // $mail->addAttachment('/path/to/file.pdf');
     
     // Sujet du mail
-    $mail->Subject = 'Test PHPMailer';
+    $mail->Subject = 'Confirmation de commande';
+    //'Test PHPMailer';
     
     // Corps du message
-    $mail->Body = 'Votre commande d\'un montant de ' .$total.  'est en cours de préparation';
+    $mail->Body = 'Récapitulatif de commande :
+        Votre commande contient ' .$quantite.' '.$libelle.' pour un montant total de '.$total. ' euros.Votre commande est en cours de préparation';
     //"On teste l'envoi de mails avec PHPMailer";
     
     // On envoie le mail dans un block try/catch pour capturer les éventuelles erreurs
