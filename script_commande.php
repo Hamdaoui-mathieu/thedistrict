@@ -116,7 +116,8 @@ try {
     $mail->Subject = 'Test PHPMailer';
     
     // Corps du message
-    $mail->Body = "On teste l'envoi de mails avec PHPMailer";
+    $mail->Body = 'Votre commande d\'un montant de ' .$total.  'est en cours de préparation';
+    //"On teste l'envoi de mails avec PHPMailer";
     
     // On envoie le mail dans un block try/catch pour capturer les éventuelles erreurs
     if ($mail){
