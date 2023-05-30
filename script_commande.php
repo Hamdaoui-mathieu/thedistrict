@@ -118,7 +118,7 @@ try {
     
     // Corps du message
     $mail->Body = 'Récapitulatif de commande :
-        Votre commande contient ' .$quantite.' '.$libelle.' pour un montant total de '.$total. ' euros.Votre commande est en cours de préparation';
+        Votre commande contient ' .$quantite.' '.$libelle.' pour un montant total de '.$total. ' euros.Votre commande est en cours de préparation.';
     //"On teste l'envoi de mails avec PHPMailer";
     
     // On envoie le mail dans un block try/catch pour capturer les éventuelles erreurs
