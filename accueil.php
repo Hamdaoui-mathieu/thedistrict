@@ -9,8 +9,23 @@ $tableau2 = plat_populaire();
 if(isset($_SESSION['commande_ok'])){
     // var_dump($_SESSION['commande_ok']);
     echo '<div id="message" class="alert-success">'; 
-    echo $_SESSION["commande_ok"]; 
+    echo $_SESSION["commande_ok"];
     echo '</div>';
+    echo "<script type='text/javascript'>
+    var cpt = 10;
+    timer = setInterval(function(){
+        if(cpt>0) // si on a pas encore atteint la fin
+        {
+            --cpt;
+        }
+        else // Si on atteint la fin du timer
+        {
+            var doc = document.getElementById('message');
+            doc.hidden = true;
+            clearInterval(timer);
+        }
+    }, 500);
+    </script>";
     unset ($_SESSION['commande_ok']);
     
 }else if(isset($_SESSION['commande_ko'])){
@@ -20,6 +35,7 @@ if(isset($_SESSION['commande_ok'])){
 }
 
 ?>
+
 <div class="bg1">
     <form method="post" action="search.php" class="float-right" role="search">
         <input class="search" name="search" type="search" placeholder="rechercher" aria-label="Search">
