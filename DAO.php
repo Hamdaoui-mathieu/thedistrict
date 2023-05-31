@@ -127,6 +127,15 @@ function utilisateur($email)
     return $user;
 }
 
+function users()
+{
+    $db = connexionBase();
+    $requete = $db->query("SELECT * FROM utilisateur");
+    $user = $requete->fetchAll(PDO::FETCH_OBJ);
+    $requete->closeCursor();
+    return $user;
+}
+
 // commande 
 
 // creer une commande
@@ -194,52 +203,3 @@ function delete_command($id){
    
 // }
 
-
-//fonctions panier
-
-// function creerPanier(){
-//     if (!isset($_SESSION['panier']))
-//         {
-//             $_SESSION['panier'] = array();
-//             $_SESSION['panier']['libelleProduit'] = array();
-//             $_SESSION['panier']['qteProduit'] = array();
-//             $_SESSION['panier']['prixProduit'] = array();
-//             $_SESSION['panier']['verrou'] = false;
-//         }
-//         return true;
-// }
-
-// function ajouterArticle($libelleProduit, $qteProduit, $prixProduit)
-//     {
-//         //si le panier existe
-//         if(creerPanier() && !isVerrouille())
-//         {
-//             //si le produit existe déjà on ajoute seulement la quantité
-//         $positionProduit = array_search($libelleProduit, $_SESSION['panier']['libelleProduit']);
-
-//         if($positionProduit !== false)
-//         {
-//             $_SESSION['panier']['qteProduit'][$positionProduit]+= $qteProduit ;
-//         }
-//         else
-//         {//sinon on ajoute le produit
-//             array_push($_SESSION['panier']['libelleProduit'], $libelleProduit);
-//             array_push($_SESSION['panier']['qteProduit'], $qteProduit);
-//             array_push($_SESSION['panier']['prixProduit'], $prixProduit);
-//         }
-//     }
-//     else
-
-//     echo "Un problème est survenu veuillez contactez l'administrateur du site.";
-
-//     }
-
-// function supprimerArticle( $libelleProduit){
-//     // si le panier existe
-//     if (creerPanier() && isVerrouille())
-//     {
-//         // Nous allons passer par un panier temporire
-//     $tmp=array();
-//     $tmp['libelleProduit'] = array();
-//     }
-// }

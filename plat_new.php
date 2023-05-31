@@ -5,7 +5,7 @@ include_once('headerAdmin.php');
 
             <h1>Saisie d'un nouveau plat</h1>
 
-                <a href="plat.php"><button>Retour à la liste des plats</button></a>
+                <a href="plat_modif.php"><button>Retour à la liste des plats</button></a>
 
 <br>
 <br>
