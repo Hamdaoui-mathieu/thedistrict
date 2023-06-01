@@ -1,12 +1,12 @@
 <?php
-include('header.php');
+include('headerAdmin.php');
 include('DAO.php');
 $tableau = plat();
 //var_dump($tableau);
 
 ?>
 <div class="bg3">
-    <h1 class="titre">Tout nos plats</h1>
+    <h1 class="titre">Suppression de plat</h1>
 </div>
 <br>
 <br>
@@ -16,18 +16,16 @@ $tableau = plat();
         <?php foreach ($tableau as $plat) : ?>
 
 
-            <div class="col afftexton col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <a href="detail_plat.php?id=<?= $plat->id ?>">
+            <div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <a href="script_plat_delete.php?id=<?= $plat->id ?>" onclick="return confirm('Voulez-vous vraiment supprimer ce plat?');">
                     <img src="images_the_district/food/<?= $plat->image ?>"  class="rounded img-responsive ;" height="250px" width="250px">
-                </a>
+            </a>
                 <br>
                 <br>
                 <p class="cadre"><strong><?= $plat->libelle  ?></strong><br>
-                <form action="commande.php" method="POST"> 
-                <input type="hidden" name="commande" value="<?= $plat->id   ?>" />
-                    <!-- <input class="afftext" type="number" size="1"> -->
-                    <input class=" afftext" type="submit" value="Ajouter au panier"></input>
-                    </form>
+                <form action="plat_form.php?id=<?= $plat->id ?>" method='POST'>
+                    <input type="hidden" value="<?= $plat->id ?>" name="platmodif">
+                </form>
                     <br>
                 <br>
             </div>

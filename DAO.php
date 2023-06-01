@@ -172,6 +172,22 @@ function delete_command($id){
     return true;
 }
 
+//modifplat
+function ModifPlat($idplat)
+{
+
+
+    $db = connexionBase();
+
+    $requete = $db->query('
+    SELECT * 
+    FROM plat 
+    WHERE id = '.$idplat.'
+    ');
+    $tableau = $requete->fetchAll(PDO::FETCH_OBJ);
+    $requete->closeCursor();
+    return $tableau;
+}
 
 
 // function creerUtilisateur($nom, $login, $mdp){

@@ -16,5 +16,5 @@ try {
 
 
 TrtRedirection:
-header("Location: plat_delete.php");
+header("Location: plat_supp.php");
 exit;

@@ -17,13 +17,16 @@ $tableau = plat();
 
 
             <div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <form action="plat_form.php?id=<?= $plat->id ?>" method='POST'>
+            <button type="submit" class='btn'>
                     <img src="images_the_district/food/<?= $plat->image ?>"  class="rounded img-responsive ;" height="250px" width="250px">
                 <br>
                 <br>
                 <p class="cadre"><strong><?= $plat->libelle  ?></strong><br>
-                <!-- <a href="plat_form.php?id=<?= $plat->id ?>" class="button">Modifier</a> -->
-                <a href="script_plat_delete.php?id=<?= $plat->id ?>" onclick="return confirm('Voulez-vous vraiment supprimer ce plat?');" class="button">Supprimer</a>
-                    </form>
+                    <input type="hidden" value="<?= $plat->id ?>" name="platmodif">
+                    </button>
+                </form>
+                
                     <br>
                 <br>
             </div>

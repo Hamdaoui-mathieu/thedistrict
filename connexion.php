@@ -20,7 +20,7 @@ if(isset($_SESSION['flash']['danger'])) {
     <h1 class="titre">Connexion utilisateur</h1>
 </div>
 <div class="float-right">
-<p>Pas encore de compte? C'est <a href="inscription.php">par ici!!</a></p>
+<p >Pas encore de compte? C'est <a class="text-success" href="inscription.php">par ici!!</a></p>
 </div>
 
 <br>

@@ -38,17 +38,17 @@
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul class="navbar-nav ml-auto">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="plat_new.php" target="#top">Ajout plat</a>
+                                            <a class="nav-link" href="plat_admin.php" target="#top">Plat</a>
                                         </li>
-                                        <li class="nav-item">
+                                        <!-- <li class="nav-item">
                                             <a class="nav-link" href="plat_modif.php" target="#top">Supp' plat</a>
-                                        </li>
+                                        </li> -->
                                         <li class="nav-item">
                                             <a class="nav-link" href="users.php" target="#top">supp' user</a>
                                         </li>
-                                        <li class="nav-item">
+                                        <!-- <li class="nav-item">
                                             <a class="nav-link" href="contact.php" target="#top">contact</a>
-                                        </li>
+                                        </li> -->
                                         <li class="nav-item">
                                             <a class="nav-link" href="connexion.php" target="#top">connexion</a>
                                         </li>

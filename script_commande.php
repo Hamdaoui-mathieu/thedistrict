@@ -117,7 +117,7 @@ try {
     //'Test PHPMailer';
     
     // Corps du message
-    $mail->Body = 'Récapitulatif de commande :
+    $mail->Body = 'Récapitulatif de votre commande du ' .$date_commande. ' :
         Votre commande contient ' .$quantite.' '.$libelle.' pour un montant total de '.$total. ' euros. Votre commande est en cours de préparation.';
     //"On teste l'envoi de mails avec PHPMailer";
     

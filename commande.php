@@ -32,6 +32,7 @@ $tableau = detail($id);
             <form action="script_commande.php" method="post">
             <input type="hidden" name="commande" value="<?= $plat->id   ?>" />
                     <input type="hidden" name="prix" value="<?=$plat->prix ?>" />
+                    <input type="hidden" name="libelle" value="<?=$plat->libelle ?>" />
             <input name ="quantite" type="number" size="1" value="1">
 
             <p>* Ces zones sont obligatoires</p>
@@ -54,7 +55,7 @@ $tableau = detail($id);
                 </fieldset>
                 <input type="submit"  onclick="return confirm('Voulez-vous valider cette commande?');" value="Commander">
 
-                <br><br><br><br>
+                <br> <br> <br> <br> <br> <br> <br> 
 
 <?php
 
