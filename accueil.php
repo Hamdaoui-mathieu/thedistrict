@@ -53,17 +53,17 @@ if(isset($_SESSION['commande_ok'])){
 
             <!-- <div class="container-fluid"> -->
 
-            <div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12" >
-            <div class="zoom">
+            <div class="col afftexton col-lg-4 col-md-4 col-sm-6 col-xs-12" >
+     
                 <a href="plat_categorie.php?id_categorie=<?= $categorie->id ?>">
              
-                    <img src="/images_the_district/category/<?= $categorie->image ?>" class="rounded img-responsive;" height="250px" width="250px">
+                    <img class="zoom" src="/images_the_district/category/<?= $categorie->image ?>" class="rounded img-responsive;" height="250px" width="250px">
                 </a>
-            </div>
+        
                 <br>
                 <br>
                 <div>
-                    <p class="reseaux"><strong><?= $categorie->libelle  ?></strong><br>
+                    <p class="reseaux afftext"><strong><?= $categorie->libelle  ?></strong><br>
                 </div>
             </div>
 
@@ -77,14 +77,14 @@ if(isset($_SESSION['commande_ok'])){
 </div>
 
 <h2>Les plats du moments :</h2>
-
+<br>
 <div class="container-fluid">
     <div class="row">
         <?php foreach ($tableau2 as $categorie) :  ?>
 
             <!-- <div class="container-fluid"> -->
 
-            <div class="col col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="col afftexton col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <a class='' href="detail_plat.php?id=<?= $categorie->id ?>">
 
                     <img src="/images_the_district/food/<?= $categorie->image ?>" class="rounded img-responsive" height="255px" width="255px" ;>
@@ -92,7 +92,7 @@ if(isset($_SESSION['commande_ok'])){
                 <br>
                 <br>
                 <div>
-                    <p class="reseaux"><strong><?= $categorie->libelle  ?></strong><br>
+                    <p class="reseaux afftext"><strong><?= $categorie->libelle  ?></strong><br>
                 </div>
             </div>
             <!-- </div> -->

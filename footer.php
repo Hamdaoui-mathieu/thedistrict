@@ -9,8 +9,8 @@
 
 </div>
 <div class="float-right">
-    <a href="mentions_légales.php" title="Mentions Légales">Mentions Légales</a>
-    <a href="confidentialités.php" title="Politiques de confidentialités">Politiques de confidentialités</a>
+    <a class="text-warning" href="mentions_légales.php" title="Mentions Légales">Mentions Légales</a>
+    <a class="text-warning" href="confidentialités.php" title="Politiques de confidentialités">Politiques de confidentialités</a>
 </div>
 </div>
 <br>

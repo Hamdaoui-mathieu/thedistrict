@@ -17,14 +17,14 @@ $tableau = categorie();
         <?php foreach ($tableau as $categorie) :  ?>
 
 
-            <div class="col col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="col afftexton col-lg-3 col-md-4 col-sm-6 col-xs-12">
 
                 <a href="plat_categorie.php?id_categorie=<?= $categorie->id ?>">
                     <img src="/images_the_district/category/<?= $categorie->image ?>"  class="rounded img-responsive ;" height="250px" width="250px">
                 </a>
                 <br>
                 <br>
-                <p class="cadre"><strong><?= $categorie->libelle  ?></strong><br>
+                <p class="cadre afftext"><strong><?= $categorie->libelle  ?></strong><br>
 
 
             </div>
