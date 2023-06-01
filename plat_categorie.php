@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('header.php');
 include('DAO.php');
 
@@ -28,7 +29,7 @@ $tableau2 = plat_populaire();
 <div class="container-fluid">
     <div class="row">
         <?php foreach ($tableau as $plat) : ?>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="afftexton col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <a href="detail_plat.php?id=<?= $plat->id ?>">
                     <img src="images_the_district/food/<?= $plat->image ?>" class="rounded img-responsive ;" height="250px" width="250px">
                 </a>
@@ -37,7 +38,8 @@ $tableau2 = plat_populaire();
                 <p class="cadre"><strong><?= $plat->libelle  ?></strong><br>
                 <form action="commande.php" method="POST">
                     <input type="hidden" name="commande" value="<?= $plat->id   ?>" />
-                    <input type="submit" value="Ajouter au panier"></input>
+                    <!-- <input class="afftext" type="number" size="1"> -->
+                    <input class="afftext" type="submit" value="Ajouter au panier"></input>
                     </form>
                     <br>
                 <br>

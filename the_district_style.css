@@ -31,11 +31,23 @@
     -webkit-transform: scale(0.8); ; /* Safari 3-8 */
     transform: scale(0.8);
     }
-
+p{
+    font-family: cursive;
+    font-size: xx-large;
+    
+}
 .search {
     width: 40%;
 }
 
+.afftexton .afftext {
+    opacity: 0;
+    
+}
+.afftexton:hover .afftext{
+    opacity: 100% !important;
+
+}
 .fond {
     overflow: hidden;
     position: relative;
@@ -92,7 +104,7 @@
 
 nav {
     display: flex;
-    background-color: rgba(194, 189, 189, 0.541);
+    /* background-color: rgba(194, 189, 189, 0.541); */
     line-height: 25px;
     width: 100%;
 }
@@ -148,7 +160,7 @@ img {
     nav{
         display: flex;
         align-items: center;
-        background-color: rgba(194, 189, 189, 0.541);
+        /* background-color: rgba(194, 189, 189, 0.541); */
     }
 
     .back {
