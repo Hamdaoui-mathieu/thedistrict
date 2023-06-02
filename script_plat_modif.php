@@ -16,6 +16,7 @@
         exit;
     }
 
+if (isset($_FILES["picture"]) && $_FILES["picture"]["error"] == 0) {
    if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if (isset($_FILES["picture"]) && $_FILES["picture"]["error"] != 0) {
@@ -99,7 +100,33 @@ catch (Exception $e) {
     echo "Erreur : " . $requete->errorInfo()[2] . "<br>";
     die("Fin du script (script_plat_modif.php)");
 }
+}
+//si image non modif
+else {
+    try {
+        $db = connexionBase();
+          $requete = $db->prepare("UPDATE plat SET libelle =:libelle, description = :description, prix = :prix, id_categorie = :id_cat, active = :active where id = :id;"); 
+    
+        $requete->bindValue(":id", $id, PDO::PARAM_INT);
+        $requete->bindValue(":libelle", $libelle, PDO::PARAM_STR);
+        $requete->bindValue(":description", $description, PDO::PARAM_STR);
+        $requete->bindValue(":prix", $prix, PDO::PARAM_STR);
+        $requete->bindValue(":id_cat", $id_cat, PDO::PARAM_STR);
+        $requete->bindValue(":active", $active, PDO::PARAM_STR);
+        $requete->execute();
+    
+    
+        $requete->closeCursor();
+    }
+    
+    catch (Exception $e) {
+        var_dump($requete->queryString);
+        var_dump($requete->errorInfo());
+        echo "Erreur : " . $requete->errorInfo()[2] . "<br>";
+        die("Fin du script (script_plat_modif.php)");
+    }
 
-header("Location: plat.php");
+}
+header("Location: plat_modif.php");
 
 exit;

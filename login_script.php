@@ -21,7 +21,7 @@ if($user){//si l'utilisateur existe
         //$_SESSION['auth'] = $user;
         
         $_SESSION['flash']['success'] = "Bonjour " .$user["nom_prenom"]. ". Vous êtes maintenant connecté";
-    
+        // $_SESSION['user'] = $user['nom_prenom'];
         header('location: accueil.php');
     exit();
     }

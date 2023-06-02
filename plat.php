@@ -6,7 +6,7 @@ $tableau = plat();
 
 ?>
 <div class="bg3">
-    <h1 class="titre">Tout nos plats</h1>
+    <h1 class="titre">Tous nos plats</h1>
 </div>
 <br>
 <br>
